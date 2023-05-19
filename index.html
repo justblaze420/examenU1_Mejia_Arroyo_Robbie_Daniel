@@ -23,6 +23,39 @@
         <img src="https://i.discogs.com/-1nPkTHIH-SOF7bhgF-ivu3MmnLaRrF4F3yOh8gmJ-s/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5Njg2/MzktMTU5Mzc3ODcz/OC01MDQwLmpwZWc.jpeg" alt=""height="400px">
         <h3>Fun fact: Es mi album favorito de toda la vida</h3>
         <img src="https://i.discogs.com/2yOjhlLkjJstIuHVSgsTs0nJHLSIlTagfVVYZAV8GHc/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5Njg2/MzktMTY4MTA4Njcy/Mi03NDg3LmpwZWc.jpeg" height="200px"><img src="https://i.discogs.com/PE9Y_jXUHxdVxizQNjAfgrTNECmB4qvPlOPnBX9YZUY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5Njg2/MzktMTY4MTA4Njcy/Mi0zNzA2LmpwZWc.jpeg" alt="" height="200px">
+        <br>
+        <br>
+        <h2>Composiciones.</h2>
+        <img id="imagenCambiante" src="img/1.jpg" style="width: 300px; height: 300px;">
+        <br>
+        <button class="button" onclick="volver()">Anterior</button> 
+        <button class="button" onclick="Siguiente()">Siguiente</button>
+        <script>
+            var imagenes = [
+              "img/1.jpg",
+              "img/2.jpg",
+              "img/3.jpg",
+              "img/4.jpg",
+              "img/5.jpg"
+            ];
+        
+            var indiceActual = 0;
+        
+            function Siguiente() {
+              indiceActual = (indiceActual + 1) % imagenes.length;
+              cambiarImagen(indiceActual);
+            }
+        
+            function volver() {
+              indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+              cambiarImagen(indiceActual);
+            }
+        
+            function cambiarImagen(indice) {
+              var imagen = document.getElementById("imagenCambiante");
+              imagen.src = imagenes[indice];
+            }
+          </script>
         <h6>©Robbie Daniel Mejia Arroyo</h6>
     </center>
 
